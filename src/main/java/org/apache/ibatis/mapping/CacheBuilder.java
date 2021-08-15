@@ -126,10 +126,10 @@ public class CacheBuilder {
         ((ScheduledCache) cache).setClearInterval(clearInterval);
       }
       if (readWrite) {
-        cache = new SerializedCache(cache);
+        cache = new SerializedCache(cache); //k3:LruCache外面包装一层SerializedCache
       }
-      cache = new LoggingCache(cache);
-      cache = new SynchronizedCache(cache);
+      cache = new LoggingCache(cache); //k3: SerializedCache外面再包装一层LoggingCache
+      cache = new SynchronizedCache(cache); //k3: LoggingCache外面再包装一层SynchronizedCache
       if (blocking) {
         cache = new BlockingCache(cache);
       }

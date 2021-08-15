@@ -152,6 +152,7 @@ public class ParamNameResolver {
    * @return a {@link ParamMap}
    * @since 3.5.5
    */
+  //k66: list参数的处理，包装到map，key为 list 或 array
   public static Object wrapToMapIfCollection(Object object, String actualParamName) {
     if (object instanceof Collection) {
       ParamMap<Object> map = new ParamMap<>();

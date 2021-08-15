@@ -21,9 +21,9 @@ public class App {
             //将XML配置文件构建为Configuration配置类
             reader = Resources.getResourceAsReader(resource);
             // 通过加载配置文件流构建一个SqlSessionFactory  DefaultSqlSessionFactory
-            SqlSessionFactory sqlMapper = new SqlSessionFactoryBuilder().build(reader);
+            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
             // 数据源 执行器  DefaultSqlSession
-            SqlSession session = sqlMapper.openSession();
+            SqlSession session = sqlSessionFactory.openSession();
             try {
                 // 执行查询 底层执行jdbc
                 User user = (User)session.selectOne("cn.by.persist.mapper.UserMapper.selectById", 1);

@@ -136,7 +136,7 @@ public class MapperBuilderAssistant extends BaseBuilder {
         .readWrite(readWrite)
         .blocking(blocking)
         .properties(props)
-        .build();
+        .build(); //k3:构建器模式创建缓存对象
     configuration.addCache(cache);
     currentCache = cache;
     return cache;

@@ -26,6 +26,7 @@ public class InterceptorChain {
 
   private final List<Interceptor> interceptors = new ArrayList<>();
 
+  //k3:添加插件，为目标对象创建动态代理
   public Object pluginAll(Object target) {
     for (Interceptor interceptor : interceptors) {
       target = interceptor.plugin(target);

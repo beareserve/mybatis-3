@@ -114,7 +114,7 @@ public class XMLMapperBuilder extends BaseBuilder {
       }
       builderAssistant.setCurrentNamespace(namespace);
       cacheRefElement(context.evalNode("cache-ref"));
-      cacheElement(context.evalNode("cache"));
+      cacheElement(context.evalNode("cache"));//k3:解析mapper中的cache
       parameterMapElement(context.evalNodes("/mapper/parameterMap"));
       resultMapElements(context.evalNodes("/mapper/resultMap"));
       sqlElement(context.evalNodes("/mapper/sql"));

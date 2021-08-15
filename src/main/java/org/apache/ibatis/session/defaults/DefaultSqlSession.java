@@ -313,6 +313,7 @@ public class DefaultSqlSession implements SqlSession {
     return (!autoCommit && dirty) || force;
   }
 
+  //k3:这里相对旧版本有变动
   private Object wrapCollection(final Object object) {
     return ParamNameResolver.wrapToMapIfCollection(object, null);
   }

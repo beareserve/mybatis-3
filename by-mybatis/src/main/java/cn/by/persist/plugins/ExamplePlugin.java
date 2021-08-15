@@ -28,7 +28,7 @@ import java.util.Properties;
         MappedStatement ms= (MappedStatement) args[0];
         return invocation.proceed();
     }
-    // new4大对象的时候调用，所以4大对象都会被代理到Plugin
+    // new4大对象的时候调用，所以4大对象都会被代理到Plugin，plugin就是个 invocationHandler，利用jdk动态代理
     public Object plugin(Object target) {
         return Plugin.wrap(target, this);
     }

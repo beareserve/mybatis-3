@@ -85,6 +85,8 @@ public class CachingExecutor implements Executor {
   @Override
   public <E> List<E> query(MappedStatement ms, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler) throws SQLException {
     BoundSql boundSql = ms.getBoundSql(parameterObject);
+    //k3: -737797678:1957559160:cn.by.persist.mapper.UserMapper.selectById:0:2147483647:select id,user_name,create_time from t_user
+    //         WHERE  id=?:1:development
     CacheKey key = createCacheKey(ms, parameterObject, rowBounds, boundSql);
     return query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);
   }
