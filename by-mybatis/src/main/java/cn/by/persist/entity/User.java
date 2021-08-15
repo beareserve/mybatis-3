@@ -1,12 +1,13 @@
 package cn.by.persist.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-/***
- * @Author 徐庶   QQ:1092002729
- * @Slogan 致敬大师，致敬未来的你
+
+/**
+ * 配置文件指定二级缓存，实体类要实现序列化接口
  */
-public class User{
+public class User implements Serializable {
 
     private Long id ;
     private String userName ;
