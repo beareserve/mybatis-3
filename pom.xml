@@ -18,9 +18,6 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <modules>
-    <module>by-mybatis</module>
-  </modules>
 
   <parent>
     <groupId>org.mybatis</groupId>
@@ -402,6 +399,12 @@
           <exclude>**/*.java</exclude>
         </excludes>
       </resource>
+      <resource>
+        <directory>/src/test/resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
     </resources>
     <testResources>
       <testResource>
@@ -429,12 +432,12 @@
   </profiles>
 
   <!-- Will remove after released mybatis-parent 32+ (See https://github.com/mybatis/mybatis-3/issues/1926) -->
-  <repositories>
-    <repository>
-      <id>sonatype-oss-snapshots</id>
-      <name>Sonatype OSS Snapshots Repository</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </repository>
-  </repositories>
+<!--  <repositories>-->
+<!--    <repository>-->
+<!--      <id>sonatype-oss-snapshots</id>-->
+<!--      <name>Sonatype OSS Snapshots Repository</name>-->
+<!--      <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+<!--    </repository>-->
+<!--  </repositories>-->
 
 </project>
