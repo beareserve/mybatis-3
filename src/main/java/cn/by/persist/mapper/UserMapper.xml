@@ -28,7 +28,7 @@
     </resultMap>
 
 
-    <select id="selectById"  resultMap="result"     >
+    <select id="selectById" resultMap="result">
         select id,user_name,create_time from t_user
         <where>
             <if test="param1>0">

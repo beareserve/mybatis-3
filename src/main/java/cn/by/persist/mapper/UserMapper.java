@@ -13,9 +13,9 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package persist.mapper;
+package cn.by.persist.mapper;
 
-import persist.entity.User;
+import cn.by.persist.entity.User;
 
 import java.util.List;
 
