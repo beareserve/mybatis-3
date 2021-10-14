@@ -253,7 +253,8 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.16</version>
+<!--      <version>8.0.16</version>这个版本驱动有问题-->
+      <version>8.0.23</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
     <dependency>
